@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn How to Fly in 4 Weeks | The Ultimate Pilot Guide</title>
+    <meta name="description" content="Master the art of flight with 'Learn How to Fly in 4 Weeks'.">
+    
+    <!-- Using Roboto for a clean, standard professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .main-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #004080; /* Standard Navy Blue */
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-brand {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffc107; /* Amber accent */
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+            border-bottom: 1px solid #eee;
+        }
+
+        h1 {
+            color: #004080;
+            font-size: 42px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #555;
+            font-weight: 300;
+            margin-top: 0;
+        }
+
+        /* CSS Book Cover - Cleaned up */
+        .book-cover {
+            width: 220px;
+            height: 320px;
+            background: linear-gradient(135deg, #0056b3, #003366);
+            color: white;
+            border-radius: 4px;
+            margin: 40px auto;
+            padding-top: 60px;
+            box-shadow: 15px 15px 25px rgba(0,0,0,0.2);
+            position: relative;
+            border-left: 8px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .book-cover:hover {
+            transform: translateY(-5px);
+        }
+
+        .cta-button {
+            background-color: #e65100; /* Deep Orange */
+            color: white;
+            font-size: 18px;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #bf360c;
+        }
+
+        /* Sections */
+        .section-header {
+            text-align: center;
+            color: #333;
+            font-size: 30px;
+            margin: 60px 0 40px 0;
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #004080;
+            margin: 15px auto 0;
+        }
+
+        .content-section {
+            padding: 40px;
+        }
+
+        /* Flexbox Grid */
+        .features-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .icon { font-size: 30px; margin-bottom: 15px; display: block; }
+
+        /* List Styling */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .benefits-list li {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefits-list li::before {
+            content: '✓';
+            color: green;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* Reviews */
+        .reviews-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .review-card {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px;
+            border-left: 4px solid #004080;
+        }
+
+        .stars { color: #ffc107; letter-spacing: 2px; }
+
+        /* Author */
+        .author-box {
+            display: flex;
+            align-items: center;
+            background: #f1f5f9;
+            padding: 40px;
+            border-radius: 8px;
+            gap: 30px;
+        }
+
+        .author-img {
+            width: 120px;
+            height: 120px;
+            background-color: #ccc;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Checkout */
+        .checkout-section {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .price-box {
+            background: white;
+            color: #333;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .price {
+            font-size: 48px;
+            color: #e65100;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #888;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9em;
+        }
+
+        footer a { color: #ccc; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: white; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-brand { display: none; }
+            nav { justify-content: center; }
+            .features-grid, .reviews-container, .author-box {
+                flex-direction: column;
+            }
+            .author-box { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">AeroMastery</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#benefits">Overview</a>
+            <a href="#reviews">Testimonials</a>
+            <a href="#buy">Order Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <h1>Learn How to Fly in 4 Weeks</h1>
+        <p class="subtitle">The definitive step-by-step guide to your Private Pilot License.</p>
+
+        <div class="book-cover">
+            <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">PILOT<br>GUIDE</div>
+            <div style="font-size: 60px; opacity: 0.8;">✈️</div>
+            <div style="margin-top: 20px; font-size: 14px;">By Capt. Maia</div>
+        </div>
+
+        <a href="#buy" class="cta-button">Start Flying Today &rarr;</a>
+        <p style="margin-top: 15px; color: #666; font-size: 0.9em;">
+            <span style="color: green;">✓</span> Instant Digital Download
+        </p>
+    </header>
+
+    <!-- Problem Section -->
+    <div class="content-section" style="background-color: white;">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 40px auto;">
+            <h2 style="color: #333;">Flight School is Expensive & Confusing.</h2>
+            <p style="color: #666;">Stop wasting time on unstructured lessons. Our guide streamlines the process to save you money.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="icon">💰</span>
+                <h3>Cut Costs</h3>
+                <p>Avoid unnecessary ground school fees by prepping at home.</p>
+            </div>
+            <div class="feature-item">
+                <span class="icon">📚</span>
+                <h3>Simplified Theory</h3>
+                <p>Complex aerodynamics explained in plain English.</p>
+            </div>
+            <div class="feature-item">
+                <span class="icon">⏱</span>
+                <h3>Fast Track</h3>
+                <p>A structured 28-day plan to get you solo-ready.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div id="benefits" class="content-section" style="background-color: #f9f9f9;">
+        <h2 class="section-header">What's Inside The Guide</h2>
+        <ul class="benefits-list">
+            <li><b>The 28-Day Schedule:</b> A day-by-day roadmap for efficient learning.</li>
+            <li><b>Aerodynamics 101:</b> Understand lift, weight, drag, and thrust visually.</li>
+            <li><b>Radio Mastery:</b> Scripts to talk to Air Traffic Control with confidence.</li>
+            <li><b>Weather Wisdom:</b> How to read METARs and TAFs instantly.</li>
+            <li><b>Checkride Prep:</b> Mock oral exams to help you pass the final test.</li>
+            <li><b>Bonus:</b> Pre-flight checklist and cockpit diagrams included.</li>
+        </ul>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="reviews" class="content-section">
+        <h2 class="section-header">Student Success Stories</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"I was intimidated by the jargon, but this book broke it down perfectly. I soloed in just 3 weeks!"</p>
+                <p><b>- Mike Johnson</b></p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"This guide saved me at least $2,000 in instructor ground fees. I walked in prepared."</p>
+                <p><b>- Emily Lewis</b></p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★☆</div>
+                <p>"Excellent resource. The radio communications chapter alone is worth the price."</p>
+                <p><b>- David Kim</b></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Author Section -->
+    <div class="content-section">
+        <div class="author-box">
+            <div class="author-img">Maia<br>Photo</div>
+            <div>
+                <h3 style="margin-top: 0;">Meet Capitan Maia Pora</h3>
+                <p>Maia is a Certified Flight Instructor (CFI) with over 5,000 flight hours. After seeing countless students struggle with the complexity of traditional flight schools, she developed the "4-Week Fly" method to make aviation accessible to everyone.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Section -->
+    <div id="buy" class="checkout-section">
+        <div class="price-box">
+            <h2 style="margin-top: 0;">Limited Time Offer</h2>
+            <p>Get the full digital package today.</p>
+            
+            <div class="old-price">$49.99</div>
+            <div class="price">$19.99</div>
+            
+            <a href="#" class="cta-button" style="width: 100%; box-sizing: border-box; display: block;">Download PDF Now</a>
+            
+            <div style="margin-top: 20px; font-size: 0.8em; color: #888; display: flex; justify-content: center; gap: 15px;">
+                <span>🔒 Secure 256-bit SSL</span>
+                <span>🛡 30-Day Guarantee</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Learn How to Fly in 4 Weeks. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Support</a>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
